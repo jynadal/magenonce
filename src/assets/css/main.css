@@ -15,13 +15,13 @@
   --primary-300: #938dff;
   --primary-400: #7b74ff;
   /* main */
-  --primary-500: #645cff;
-  --primary-600: #554ed9;
-  --primary-700: #4640b3;
-  --primary-800: #37338c;
-  --primary-900: #282566;
-  --primary-1000: #191740;
-  --primary-1100: #0a0919;
+  --primary-500: #007cb3; /* #645cff */
+  --primary-600: #008cb3;
+  --primary-700: #009cb3;
+  --primary-800: #016e7c;
+  --primary-900: #00525d;
+  --primary-1000: #003036;
+  --primary-1100: #001c20;
   /* grey */
   --grey-0: #fafbfc;
   --grey-50: #f2f4f8;
@@ -36,7 +36,6 @@
   --grey-900: #51545a;
   --grey-1000: #333538;
   --grey-1100: #141516;
-
   /* rest */
   --black: #222;
   --white: #fff;
@@ -44,6 +43,10 @@
   --red-dark: #842029;
   --green-light: #d1e7dd;
   --green-dark: #0f5132;
+  --coral-light: #ffa9b0;
+  --coral-dark: #ff4655;
+  --yellow-light: #fed693;
+  --yellow-dark: #c2a26c;
   /* box shadows */
   --shadow-1: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   --shadow-2: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
@@ -512,7 +515,7 @@ form > *:last-child {
   }
 }
 
-.featured-recipes > h5 {
+.featured-voyages > h5 {
   text-align: center;
   max-width: 100%;
 }

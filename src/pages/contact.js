@@ -2,13 +2,13 @@ import React from "react"
 import Layout from "../components/Layout"
 import { graphql } from "gatsby"
 import RecipesList from "../components/RecipesList"
-import SEO from "../components/SEO"
+import Seo from "../components/Seo"
 
 const Contact = ({ data }) => {
   const recipes = data.allContentfulRecipe.nodes
   return (
     <Layout>
-      <SEO title="Contact" />
+      <Seo title="Contact" />
       <main className="page">
         <section className="contact-page">
           <article className="contact-info">
@@ -43,7 +43,7 @@ const Contact = ({ data }) => {
             </form>
           </article>
         </section>
-        <section className="featured-recipes">
+        <section className="featured-voyages">
           <h5>Look at this Awesomesouce!</h5>
           <RecipesList recipes={recipes} />
         </section>
