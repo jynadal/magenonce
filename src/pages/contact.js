@@ -1,11 +1,11 @@
 import React from "react"
 import Layout from "../components/Layout"
 import { graphql } from "gatsby"
-import RecipesList from "../components/RecipesList"
+// import RecipesList from "../components/RecipesList"
 import Seo from "../components/Seo"
 
 const Contact = ({ data }) => {
-  const recipes = data.allContentfulRecipe.nodes
+  // const recipes = data.allContentfulRecipe.nodes
   return (
     <Layout>
       <Seo title="Contact" />
@@ -43,32 +43,33 @@ const Contact = ({ data }) => {
             </form>
           </article>
         </section>
-        <section className="featured-voyages">
+        {/* <section className="featured-voyages">
           <h5>Look at this Awesomesouce!</h5>
           <RecipesList recipes={recipes} />
-        </section>
+        </section> */}
+         
       </main>
     </Layout>
   )
 }
 
-export const query = graphql`
-  {
-    allContentfulRecipe(
-      sort: { fields: title, order: ASC }
-      filter: { featured: { eq: true } }
-    ) {
-      nodes {
-        id
-        title
-        cookTime
-        prepTime
-        image {
-          gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
-        }
-      }
-    }
-  }
-`
+// export const query = graphql`
+//   // {
+//   //   allContentfulRecipe(
+//   //     sort: { fields: title, order: ASC }
+//   //     filter: { featured: { eq: true } }
+//   //   ) {
+//   //     nodes {
+//   //       id
+//   //       title
+//   //       cookTime
+//   //       prepTime
+//   //       image {
+//   //         gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
+//   //       }
+//   //     }
+//   //   }
+//   // }
+// `
 
 export default Contact

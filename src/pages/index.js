@@ -1,7 +1,8 @@
 import React from "react"
 import Layout from "../components/Layout"
 import { StaticImage } from "gatsby-plugin-image"
-import AllRecipes from "../components/AllRecipes"
+import AllTravels from "../components/AllTravels"
+
 import Seo from "../components/Seo"
 export default function Home() {
   return (
@@ -20,12 +21,11 @@ export default function Home() {
             <div className="hero-text">
               <h1>Cyclades, Corse, Canaries, Sicile, Djerba ... </h1>
               <h4>Cet été, vos rêves d'évasion seront exaucés!</h4>
-              {/* <h4>Pour des vacances idylliques!</h4> */}
 
             </div>
           </div>
         </header>
-        <AllRecipes />
+        <AllTravels />
       </main>
     </Layout>
   )

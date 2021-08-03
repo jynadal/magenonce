@@ -25,7 +25,7 @@ const Navbar = () => {
             Accueil
           </Link>
           <Link
-            to="/recipes"
+            to="/voyages"
             className="nav-link"
             activeClassName="active-link"
             onClick={() => setShow(false)}
