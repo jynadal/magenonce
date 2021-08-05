@@ -1,4 +1,4 @@
-const setupTags = travels => {
+const setupTags = (travels) => {
     const allTags = {}
     
 travels.forEach(travel => {
