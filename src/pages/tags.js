@@ -9,7 +9,7 @@ const Tags = ({data}) => {
   const newTags = setupTags(data.allContentfulVoyages.nodes)
   return (
     <Layout>
-      <Seo title="Tags" />
+      <Seo title="Catégories" />
       <main className="page">
         <section className="tags-page">
           {newTags.map((tag, index) => {

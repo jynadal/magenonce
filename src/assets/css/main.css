@@ -388,7 +388,7 @@ form > *:last-child {
   transition: var(--transition);
 }
 .active-link {
-  color: var(--primary-500);
+  color: var(--coral-dark); /*--primary-500*/
 }
 .contact-link {
   display: flex;

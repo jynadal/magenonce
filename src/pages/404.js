@@ -5,11 +5,11 @@ import Seo from "../components/Seo"
 const Error = () => {
   return (
     <Layout>
-      <Seo title="Error" />
+      <Seo title="Page d'erreur 404" />
       <main className="error-page">
         <section>
           <h1>404</h1>
-          <h3>page not found</h3>
+          <h3>Vous avez vraiment besoin de vacances!</h3>
         </section>
       </main>
     </Layout>

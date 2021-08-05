@@ -7,7 +7,7 @@ exports.createPages = async ({ graphql, actions }) => {
     query GetTravels {
       allContentfulVoyages {
         nodes {
-          content {
+          contenu {
             tags
           }
         }
@@ -20,7 +20,7 @@ result.data.allContentfulVoyages.nodes.forEach(travel => {
     const tagSlug = slugify(tag, { lower:true })
        createPage({
         path: `/tags/${tagSlug}`,
-      component: path.resolve(`src/templates/tag-template.jsx`),
+      component: path.resolve(`src/templates/tag-template.js`),
       context: {
           tag: tag,
         },

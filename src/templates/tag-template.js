@@ -12,7 +12,7 @@ const TagTemplate = ({data, pageContext}) => {
             <main className="page">
                 <h2>{pageContext.tag}</h2>
                 <div className="tag-voyages">
-                    <TravelsList travel={travel} />
+                    <TravelsList travels={travels} />
                 </div>          
             </main>
         </Layout>

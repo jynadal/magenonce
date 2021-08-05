@@ -7,14 +7,14 @@ import Seo from "../components/Seo"
 export default function Home() {
   return (
     <Layout>
-      <Seo title="Hommmmeeee " />
+      <Seo title="Accueil" description="Agence de voyage qui vous offres le monde à porter de main." />
       <main className="page">
         <header className="hero">
           <StaticImage
             src="../assets/images/drink.jpg"
-            alt="womens on beach"
+            alt="vacances cocktail plage"
             className="hero-img"
-            placeholder="tracedSVG"
+            placeholder="blurred"
             layout="fullWidth"
           ></StaticImage>
           <div className="hero-container">

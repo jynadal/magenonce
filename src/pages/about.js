@@ -8,7 +8,7 @@ import Seo from "../components/Seo"
 const About = ({ data: { allContentfulVoyages:{ nodes: travels } }} ) => {
   return (
     <Layout>
-      <Seo title="About" />
+      <Seo title="A propos de Mon Agence" />
       <main className="page">
         <section className="about-page">
           <article>
