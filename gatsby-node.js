@@ -4,8 +4,8 @@ exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
 
   const result = await graphql(`
-    query GetRecipes {
-      allContentfulRecipe {
+    query GetTravels {
+      allContentfulVoyages {
         nodes {
           content {
             tags
@@ -14,17 +14,17 @@ exports.createPages = async ({ graphql, actions }) => {
       }
     }
   `)
-
-  result.data.allContentfulRecipe.nodes.forEach(recipe => {
-    recipe.content.tags.forEach(tag => {
-      const tagSlug = slugify(tag, { lower: true })
-      createPage({
+  
+result.data.allContentfulVoyages.nodes.forEach(travel => {
+  travel.contenu.tags.forEach(tag =>{
+    const tagSlug = slugify(tag, { lower:true })
+       createPage({
         path: `/tags/${tagSlug}`,
-        component: path.resolve(`src/templates/tag-template.js`),
-        context: {
+      component: path.resolve(`src/templates/tag-template.jsx`),
+      context: {
           tag: tag,
         },
-      })
     })
   })
+})
 }

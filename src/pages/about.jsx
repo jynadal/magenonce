@@ -5,9 +5,7 @@ import { Link, graphql } from "gatsby"
 import TravelsList from "../components/TravelsList"
 import Seo from "../components/Seo"
 
-const About = ({ data: { allContentfulTravels: { nodes: travels }, },
-}
-) => {
+const About = ({ data: { allContentfulVoyages:{ nodes: travels } }} ) => {
   return (
     <Layout>
       <Seo title="About" />
@@ -19,17 +17,17 @@ const About = ({ data: { allContentfulTravels: { nodes: travels }, },
 
             <p>A deux, en famille, en solo ou entre amis toutes les possibilités s’offrent à vous. Nous vous proposons les meilleurs offres, au meilleur prix afin de vous satisfaire.</p>
 
-            <p>Nos offres sont actualisées en temps réel afin de vous proposer les « bons plans du net » pour vous dégoter le séjour au meilleur prix.</p>
+            {/* <p>Nos offres sont actualisées en temps réel afin de vous proposer les « bons plans du net » pour vous dégoter le séjour au meilleur prix.</p>
 
             <p>Notre agence de voyage travaille en étroite collaboration avec les plus grands voyagistes tels que Exotisme, Bravo Club, Royal First Travel… ce qui nous permet de vous proposer tous types de voyages en passant par un séjour en All inclusive ou de bien être à un circuit combiné pour les plus aventuriers.</p>
-            
+             */}
             <Link to="/contact" className="btn">
               contact
             </Link>
           </article>
           <StaticImage
             src="../assets/images/about-beach.jpg"
-            alt="Person Pouring Salt in Bowl"
+            alt="A propos de Mon Agence"
             className="about-img"
             placeholder="blurred"
           />

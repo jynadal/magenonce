@@ -1,27 +1,21 @@
 import React from "react"
 import Layout from "../components/Layout"
 import { graphql } from "gatsby"
-// import RecipesList from "../components/RecipesList"
+import TravelsList from "../components/TravelsList"
 import Seo from "../components/Seo"
 
 const Contact = ({ data }) => {
-  // const recipes = data.allContentfulRecipe.nodes
+  const travels = data.allContentfulVoyages.nodes
   return (
     <Layout>
       <Seo title="Contact" />
       <main className="page">
         <section className="contact-page">
           <article className="contact-info">
-            <h3>Want To Get In Touch?</h3>
+            <h3>Contactez un conseiller.</h3>
             <p>
-              Four dollar toast biodiesel plaid salvia actually pickled banjo
-              bespoke mlkshk intelligentsia edison bulb synth.
-            </p>
-            <p>Cardigan prism bicycle rights put a bird on it deep v.</p>
-            <p>
-              Hashtag swag health goth air plant, raclette listicle fingerstache
-              cold-pressed fanny pack bicycle rights cardigan poke.
-            </p>
+              Une envie, une question ? Prenez contact avec un conseiller. Une question concernant un futur voyage ? </p>
+            <p> Il vous suffit de remplir notre formulaire et un conseiller vous recontacte dans les meilleurs délais.</p>
           </article>
           <article>
             <form className="form contact-form">
@@ -43,33 +37,32 @@ const Contact = ({ data }) => {
             </form>
           </article>
         </section>
-        {/* <section className="featured-voyages">
-          <h5>Look at this Awesomesouce!</h5>
-          <RecipesList recipes={recipes} />
-        </section> */}
+        <section className="featured-voyages">
+          <h5>Plannifiez vos vacances!</h5>
+          <TravelsList travels={travels} />
+        </section>
          
       </main>
     </Layout>
   )
 }
 
-// export const query = graphql`
-//   // {
-//   //   allContentfulRecipe(
-//   //     sort: { fields: title, order: ASC }
-//   //     filter: { featured: { eq: true } }
-//   //   ) {
-//   //     nodes {
-//   //       id
-//   //       title
-//   //       cookTime
-//   //       prepTime
-//   //       image {
-//   //         gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
-//   //       }
-//   //     }
-//   //   }
-//   // }
-// `
+export const query = graphql`
+{
+    allContentfulVoyages(
+      sort: {fields: title, order: ASC}
+      filter: {fonctionnalites: {eq: true}}
+    ) {
+      nodes {
+        id
+        title
+        titre2
+        image {
+          gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
+        }
+      }
+    }
+  }
+`
 
 export default Contact
