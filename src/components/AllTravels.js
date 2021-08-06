@@ -15,7 +15,7 @@ const query = graphql`
           tags
         }
         image {
-          gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
+          gatsbyImageData(layout: CONSTRAINED, placeholder: TRACED_SVG)
         }
       }
     }
@@ -27,7 +27,6 @@ const AllTravels = () => {
 
     return (
         <section className="voyages-container">
-            <h4>Les Voyages</h4>
             <TagsList travels={travels} />
             <TravelsList travels={travels} />             
         </section >

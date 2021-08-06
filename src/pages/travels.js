@@ -1,13 +1,13 @@
 import React from 'react'
 import Layout from '../components/Layout'
 import AllTravels from '../components/AllTravels'
-import TagsList from '../components/TagsList'
+import Seo from '../components/Seo'
 
 const Travels = () => {
     return (
         <Layout>
+            <Seo titre="Voyages" />
          <main className="page">
-             <TagsList />
              <AllTravels  />
          </main>
             

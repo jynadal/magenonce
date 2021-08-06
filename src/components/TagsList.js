@@ -8,7 +8,7 @@ const newTags = setupTags(travels)
 
 return (
     <div className="tag-container">
-      <h4>voyages</h4>
+      <h4>Voyages</h4>
       <div className="tags-list">
         {newTags.map((tag, index) => {
           const [text, value] = tag

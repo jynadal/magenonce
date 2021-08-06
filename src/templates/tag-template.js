@@ -1,11 +1,11 @@
 import React from 'react'
-import {graphql, Link} from "gatsby"
+import {graphql} from "gatsby"
 import TravelsList from "../components/TravelsList"
-import Layout from "../componenets/Layout"
+import Layout from "../components/Layout"
 import Seo from "../components/Seo"
 
 const TagTemplate = ({data, pageContext}) => {
-    const travels = data.contentfulVoyages.nodes
+    const travels = data.allContentfulVoyages.nodes
     return (
         <Layout>
             <Seo title={pageContext.tag} />
@@ -29,7 +29,7 @@ query GetTravelByTag($tag: String) {
       title
       titre2
       image {
-        gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
+        gatsbyImageData(layout: CONSTRAINED, placeholder: TRACED_SVG)
       }
     }
   }
