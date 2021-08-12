@@ -1,7 +1,9 @@
 import React from 'react'
 import {graphql, Link} from "gatsby"
 import {GatsbyImage, getImage} from 'gatsby-plugin-image'
-import {GiCalendar,GiMeal, GiAirplaneDeparture} from 'react-icons/gi'
+import {BiEuro} from 'react-icons/bi'
+import { GoNote} from 'react-icons/go'
+import {GiPhone, GiAirplaneDeparture, GiMeal, GiCalendar} from 'react-icons/gi'
 import Layout from '../components/Layout'
 import slugify from "slugify"
 import Seo from "../components/Seo"
@@ -9,7 +11,7 @@ import Seo from "../components/Seo"
 
 const TravelTemplate = ({data}) => {
     const {title,titre2,contenu, description:{description}, lieuxDeDepart, pension,image, duree, prix,
-    reference} = data.contentfulVoyages
+    reference, disponibilite} = data.contentfulVoyages
     const pathToImage = getImage(image)
     const {tags, tools, presentation} = contenu
     return (
@@ -21,39 +23,12 @@ const TravelTemplate = ({data}) => {
                  <h2>{title}</h2>
               <section className="voyage-hero"> 
                 <GatsbyImage image={pathToImage} alt={title} className="about-img" />
-              <article className="voyage-info">
+                <article className="voyage-info">
                 {/* <h2>{title}</h2> */}
                 <h3>{titre2}</h3>
                 <p>{description}</p>
                 {/* icons */}
-                <div className="voyage-icons">
-                  <article>
-                    <GiAirplaneDeparture />
-                    <h5>A partir de :</h5>
-                    <p>{prix}</p>
-                  </article>
-                  <article>
-                    <GiMeal />
-                    <h5>Info et résertvation :</h5>
-                    <p>01 73 323 323</p>
-                  </article>
-                  <article>
-                    <GiCalendar />
-                    <h5>Réf : </h5>
-                    <p>{reference}</p>
-                  </article>
-                </div>
-                  {/* tags Pour Prix, Réservation, Réf et VOIR NOS PRIX*/}
                   <p className="voyage-tags">
-                  {/*
-                    Dès <span>Prix</span> €TTC
-                     <span></span>
-                    Réf : 001001 */}
-                     {/* {tags.map((tag,index) => {
-                       return (<Link to={`/${tag}`} key={index}>
-                        {tag}
-                      </Link>)
-                    })} */}
                     Catégories : {tags.map((tag,index) => {
                       const slug = slugify(tag, { lower: true})
                       return (<Link to={`/tags/${slug}`} key={index}>
@@ -61,12 +36,47 @@ const TravelTemplate = ({data}) => {
                       </Link>)
                     })}
                     </p>
-              </article> 
-            </section>
-            {/* rest of the content */}
-            <section className="voyage-content">
+               </article> 
+             </section>
+             <section className="voyage-icons-btns">
+              <div className="voyage-icons">
+                  {/* tags Pour Prix, Réservation, Réf et VOIR NOS PRIX*/}
+                  <article>
+                    <BiEuro />
+                    <h5>A partir de :</h5>
+                    <p >{prix} <span className="ttc">€TTC</span></p>
+                  </article>
+                  <article>
+                    <GiPhone />
+                    <h5>Info et résertvation :</h5>
+                    <p >01 73 323 323</p>
+                  </article>
+                  <article>
+                    <GoNote />
+                    <h5>Réf : <span >{reference}</span></h5>
+                  </article>
+                  <article>
+                    <Link className="btn-reservation" to={disponibilite} target="_blank">
+                       Réservation
+                      </Link>
+                  </article>
+                 </div>
+                 {/* <div>
+                 <button a href={disponibilite}>
+                    <Link className="btn-reservation" to={disponibilite} target="_blank">
+                       Réservation
+                      </Link>
+                    </button>
+                     <Link to={disponibilite} target="_blank">
+                        Voir nos prix 
+                      </Link>
+                  </div> */}
+                
+             </section>
+             {/* rest of the content */}
+             <section className="voyage-content">
               <article>
-                <h4>Descriptif : {titre2}</h4>
+                <h4>{titre2} - {title}</h4>
               {presentation.map((item, index) => {
                 return (
                   <div key={index} className="single-instruction">
@@ -85,8 +95,8 @@ const TravelTemplate = ({data}) => {
                   <p className="single-ingredient">
                     
                       <article>
-                    <GiAirplaneDeparture />
-                    <h5>Lieux de départ</h5>
+                    <h5><GiAirplaneDeparture />
+                       Lieux de départ</h5>
                     <p>{lieuxDeDepart}</p>
                   </article>
                   <article>
@@ -110,11 +120,11 @@ const TravelTemplate = ({data}) => {
                     </p>
                   )
                 })}
-              </div>
+             </div>
             </article>
             </section>
 
-            </div>
+           </div>
           </main>
       </Layout>
     )
@@ -138,6 +148,7 @@ export const query = graphql`
     duree
     prix
     reference
+    disponibilite
     image {
       gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
     }

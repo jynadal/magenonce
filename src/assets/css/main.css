@@ -198,7 +198,7 @@ button,
   cursor: pointer;
   appearance: none;
   color: var(--white);
-  background: var(--primary-500);
+  background: var(--coral-dark); /*--primary-500 */
   border: none;
   border-radius: var(--borderRadius);
   letter-spacing: var(--letterSpacing);
@@ -207,7 +207,24 @@ button,
   transition: var(--transition);
   text-transform: capitalize;
 }
+
+ .btn-reservation {
+  cursor: pointer;
+  appearance: none;
+  color: var(--white);
+  font-size: x-large;
+  background: var(--coral-dark);
+  border: none;
+  border-radius: var(--borderRadius);
+  letter-spacing: var(--letterSpacing);
+  padding: 0.55rem 0.95rem;
+  box-shadow: var(--shadow-1);
+  transition: var(--transition);
+} 
+.btn-reservation:hover
+
 button:hover,
+.btn-reservation:hover,
 .btn:hover {
   color: var(--white);
   background: var(--primary-700);
@@ -215,7 +232,7 @@ button:hover,
 }
 button.small {
   padding: 0.25rem 0.5rem;
-  font-size: var(--smallText);
+  font-size: 1rem;
 }
 button.hipster {
   color: var(--primary-500);
@@ -442,6 +459,7 @@ form > *:last-child {
   text-align: center;
   height: 4rem;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   background: var(--black);
@@ -456,6 +474,27 @@ form > *:last-child {
 .page-footer span,
 .page-footer a {
   color: var(--primary-500);
+}
+.footer-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: var(--grey-500);
+}
+.footer-main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  height:20rem;
+}
+.footer-left,
+.footer-center,
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  text-align:flex-end;
+}
+.footer-link {
+  color:var(--grey-800);
+  font-size: 1rem;
 }
 
 /*#########*/
@@ -518,6 +557,7 @@ form > *:last-child {
 .featured-voyages > h5 {
   text-align: center;
   max-width: 100%;
+  margin-top: 2.5rem;
 }
 /*#########*/
 /* Hero */
@@ -706,24 +746,36 @@ form > *:last-child {
 }
 .voyage-icons {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
   margin: 2rem 0;
   text-align: center;
 }
 .voyage-icons svg {
-  font-size: 1.5rem;
+  font-size: 2rem;
+  color: var(--primary-500);
 }
 .voyage-icons h5,
 .voyage-icons p {
   margin-bottom: 0;
-  font-size: 0.85em;
+  font-size: 1.25em;
 }
 .voyage-icons h5 {
-  font-weight: 600;
+  font-weight: 800;
 }
 .voyage-icons p {
-  color: var(--grey-800);
+  color: var(--coral-dark);
+  font-size: 1.75em;
+}
+/* Cible ecran inférieure à 576px */
+@media screen and (max-width: 576px) {
+  .voyage-icons {
+  grid-template-columns:repeat(2,1fr);
+   gap: 2rem;
+  }
+}
+.ttc{
+  font-size: 1em;
 }
 .voyage-tags {
   display: flex;
@@ -733,7 +785,7 @@ form > *:last-child {
   font-weight: 600;
 }
 .voyage-tags a {
-  background: var(--primary-500);
+  background: var(--coral-dark);{/*--primary-500*/}
   border-radius: var(--borderRadius);
   color: var(--white);
   padding: 0.05rem 0.5rem;
@@ -746,6 +798,20 @@ form > *:last-child {
     align-items: center;
   }
 }
+/* @media screen and (min-width: 576px) {
+  .voyage-icons-btns {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+} */
+
+/* @media screen and (min-width: 992px) {
+  .voyage-icons {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+   
+  }
+} */
+
 .voyage-content {
   padding: 3rem 0;
   display: grid;
