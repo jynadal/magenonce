@@ -457,12 +457,12 @@ form > *:last-child {
 /*#########*/
 .page-footer {
   text-align: center;
-  height: 4rem;
+  /* height: 4rem; */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: var(--black);
+  background: var(--coral-dark);
   color: var(--white);
 }
 .page-footer h5 {
@@ -476,22 +476,41 @@ form > *:last-child {
   color: var(--primary-500);
 }
 .footer-header {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 7rem;
+  margin:1rem;
+  margin-top:-2rem;
+  width: 100vw;
   background-color: var(--grey-500);
 }
-.footer-main {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  height:20rem;
+.footer-header {
 }
-.footer-left,
-.footer-center,
-.footer-right {
+.footer-logo,
+.footer-qrcode {
   display: flex;
   flex-direction: column;
-  text-align:flex-end;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
 }
+.footer-header img{
+  width: 200px;
+}
+.footer-header p{
+  color: var(--coral-dark);
+}
+@media screen and (max-width: 768px){
+  .footer-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  }
+}
+
 .footer-link {
   color:var(--grey-800);
   font-size: 1rem;
@@ -568,7 +587,7 @@ form > *:last-child {
   border-radius: var(--borderRadius);
 }
 .hero {
-  height: 40vh;
+  height: 60vh;
   position: relative;
   margin-bottom: 2rem;
 }
