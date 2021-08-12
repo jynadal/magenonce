@@ -43,12 +43,12 @@ const TravelTemplate = ({data}) => {
                   {/* tags Pour Prix, Réservation, Réf et VOIR NOS PRIX*/}
                   <article>
                     <BiEuro />
-                    <h5>A partir de :</h5>
+                    <h5>A partir de:</h5>
                     <p >{prix} <span className="ttc">€TTC</span></p>
                   </article>
                   <article>
                     <GiPhone />
-                    <h5>Info et résertvation :</h5>
+                    <h5>Info et résertvation:</h5>
                     <p >01 73 323 323</p>
                   </article>
                   <article>
@@ -56,9 +56,9 @@ const TravelTemplate = ({data}) => {
                     <h5>Réf : <span >{reference}</span></h5>
                   </article>
                   <article>
-                    <Link className="btn-reservation" to={disponibilite} target="_blank">
+                    <a href={disponibilite} target="_blank" className="btn-reservation">
                        Réservation
-                      </Link>
+                      </a >
                   </article>
                  </div>                
              </section>

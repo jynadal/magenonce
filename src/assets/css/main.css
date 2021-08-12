@@ -795,8 +795,8 @@ form > *:last-child {
    gap: 2rem;
   }
 }
-.ttc{
-  font-size: 1em;
+.voyage-icons p span{
+  font-size: 0.6em;
 }
 .voyage-tags {
   display: flex;
