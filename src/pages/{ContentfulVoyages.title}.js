@@ -60,18 +60,7 @@ const TravelTemplate = ({data}) => {
                        Réservation
                       </Link>
                   </article>
-                 </div>
-                 {/* <div>
-                 <button a href={disponibilite}>
-                    <Link className="btn-reservation" to={disponibilite} target="_blank">
-                       Réservation
-                      </Link>
-                    </button>
-                     <Link to={disponibilite} target="_blank">
-                        Voir nos prix 
-                      </Link>
-                  </div> */}
-                
+                 </div>                
              </section>
              {/* rest of the content */}
              <section className="voyage-content">
@@ -95,7 +84,8 @@ const TravelTemplate = ({data}) => {
                   <p className="single-ingredient">
                     
                       <article>
-                    <h5><GiAirplaneDeparture />
+                    <GiAirplaneDeparture />
+                    <h5>
                        Lieux de départ</h5>
                     <p>{lieuxDeDepart}</p>
                   </article>

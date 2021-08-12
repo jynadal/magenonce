@@ -773,10 +773,12 @@ form > *:last-child {
 .voyage-icons svg {
   font-size: 2rem;
   color: var(--primary-500);
+  margin-right: 00.5rem;
 }
 .voyage-icons h5,
 .voyage-icons p {
   margin-bottom: 0;
+  margin-left:2rem;
   font-size: 1.25em;
 }
 .voyage-icons h5 {
@@ -867,6 +869,10 @@ form > *:last-child {
 .single-ingredient {
   border-bottom: 1px solid var(--grey-500);
   padding-bottom: 0.75rem;
+}
+.single-ingredient svg {
+  color: var(--coral-dark);
+  font-size:2em;
 }
 .single-tool {
   border-bottom: 1px solid var(--grey-500);
