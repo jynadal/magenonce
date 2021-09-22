@@ -40,7 +40,7 @@ module.exports = {
         fonts: {
           google: [
             {
-              family: "Montserrat",
+              family: "Open Sans",
               variants: ["400"],
             },
             {
@@ -110,8 +110,12 @@ module.exports = {
   resolve: `gatsby-plugin-offline`,
   options: {
     precachePages: [
+      `/`,
       `/index/`,
-      `/about/`,
+      `/travels`,
+      `/tags`,
+      `/about`,
+      `/contact`,
       `/tags/`,
       `/travels/`,
      `/tags/*`,

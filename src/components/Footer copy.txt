@@ -1,0 +1,86 @@
+import React from "react"
+import { Link } from "gatsby"
+import logo from "../assets/images/logo_monagence.png"
+import qrcode from "../assets/images/qrcode.png"
+
+
+const Footer = () => {
+  return (
+    <>
+      <div class="sub-footer">
+        <div class="container">
+          <div class="row footer-header">
+            <span class="contact-us">
+              <img src="/assets/img/logo/icon-monagence.jpg" alt="Monagence.com agence de voyage pas chere"/>
+            </span>
+            <div class="col-lg-7 col-sm-6">
+              <p class="text-right">Monagence.com ... Ne rêvez plus, voyagez !</p>
+              </div>
+              <div class="col-lg-5 col-sm-6">
+                <a href="tel:0173323323">
+                <span class="icon icon-phone text-left"> Infos et réservations : 01 73 323 323</span>
+                </a>
+              </div>
+            </div>
+            <div class="row footer-content"><div class="col-md-3"><h5>A propos de Monagence</h5>
+            <ul>
+              <li><a href="/informations/qui-sommes-nous" rel="nofollow">Qui-sommes-nous ?</a></li><li><a href="/informations/cgv" rel="nofollow">CGV</a></li><li><a href="/informations/confidentialite" rel="nofollow">Confidentialité et sécurité</a></li><li><a href="/informations/assurances-voyages/" rel="nofollow">Assurance voyage</a></li><li><a href="/informations/contact" rel="nofollow">Pour nous contacter</a></li></ul>
+            </div><div class="col-md-4">
+              <h5>CE &amp; voyage en groupe</h5>
+              <ul>
+                <li>
+                  <a href="https://ce.monagence.com" rel="nofollow">CE, devenir adhérent !</a>
+                </li>
+                <li>
+                  <a href="/services/demande-par-email/" rel="nofollow">Préparez votre voyage en groupe !</a>
+                </li>
+              </ul>
+                  </div>
+                    <div class="col-md-5 footer-content-payment">
+                      <h5>Mode de paiement</h5>
+                      <img src="/assets/img/footer/mode-paiement.png" alt="mode paiement sécurisé"/>
+                      <br>
+                      <br>
+                      <h5>Membre de :</h5>
+                      <img src="/assets/img/footer/membre-de.png" alt="Monagence est membre de Sediv"/>
+              </div>
+              </div>
+              <div class="row col-md-12 text-center copyright">
+                <p>
+          La vente de voyages sous la marque Monagence.com est assurée par SARL RF Distribution au capital de 100 000 euros.
+          Garantie financière APST IM094120019 / R.C GENERALI N° AL813861 / LI 094090006 : 15 av. Carnot 75017 Paris -
+           Agence de voyage agréée IATA  - Siège : 2 rue du Nouveau Bercy 94220 Charenton-le-Pont <br> Hébergement du site : CLARANET 68 rue du Faubourg Saint Honoré - 75008 PARIS - ©2021 Monagence.com tous droits réservés
+        </p>
+        </div>
+        {/* <!--/.Copyright--> */}
+        </div>
+      </div>
+      {/* <footer className="page-footer">
+      <div className="footer-header">
+      <div className="footer-logo">
+      <Link to="/">
+      <img src={logo} alt="Mon Agence" />
+      </Link>
+      
+      <p><span>Infos et réservation:</span>
+      <br /> 01 73 323 323 </p>
+      
+      </div>
+      <div className="footer-qrcode">
+            <p><span>Scanner le QR Code</span></p>
+          
+              <img src={qrcode} alt="Mon Agence" />
+              
+        </div>
+      </div>
+        <p>
+        &copy; {new Date().getFullYear()} <span>monagence</span>. Built by{" "}
+          <a href="https://www.gatsbyjs.com/">AgenceNAE</a>
+          </p>
+          </footer>
+        */}
+    </>
+  )
+}
+
+export default Footer

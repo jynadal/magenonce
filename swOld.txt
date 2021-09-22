@@ -12,10 +12,13 @@ if ('serviceWorker' in navigator) {
 
 self.addEventListener('install', function(event) {
   event.waitUntil(
-    caches.open('static-v1').then(function(cache) {
+    caches.open('static-v2').then(function(cache) {
       return cache.addAll([
         '/index.html',
-        '/about.html',
+        '/',
+        '/travels',
+        '/tags',
+        '/about',
         '/main.css',
         '/style.css',
         '/app.js',
@@ -39,7 +42,7 @@ self.addEventListener('fetch', function(event) {
         // and serve second one
         let responseClone = response.clone();
         
-        caches.open('static-v1').then(function (cache) {
+        caches.open('static-v2').then(function (cache) {
           cache.put(event.request, responseClone);
         });
         return response;
@@ -49,3 +52,7 @@ self.addEventListener('fetch', function(event) {
     }
   }));
 });
+
+self.addEventListener('push',() => {
+  self.registration.showNotification('My Notification')
+})

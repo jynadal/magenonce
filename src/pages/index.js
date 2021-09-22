@@ -2,9 +2,19 @@ import React from "react"
 import Layout from "../components/Layout"
 import { StaticImage } from "gatsby-plugin-image"
 import AllTravels from "../components/AllTravels"
+import Reassurance from "../components/Reassurance"
 
 import Seo from "../components/Seo"
 export default function Home() {
+
+  // const EnableNotifications = asinc () => {
+  //   let sw = await navigator.serviceWorker.ready;
+  //   let pm = await sw.pushManager.subscribe({
+  //     userVisibleOnly:true,
+  //     applicationServerKey: ''
+  //   })
+  //   console.log(result)
+  // }
   return (
     <Layout>
       <Seo title="Accueil" description="Agence de voyage qui vous offres le monde à porter de main." />
@@ -26,6 +36,8 @@ export default function Home() {
           </div>
         </header>
         <AllTravels />
+        {/* <button onClick={EnableNotifications}>Enable Notification</button> */}
+        <Reassurance />
       </main>
     </Layout>
   )
