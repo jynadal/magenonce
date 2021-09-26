@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkmonagence_agence_de_voyage=self.webpackChunkmonagence_agence_de_voyage||[]).push([[306],{1930:function(e,n,t){var a=t(5318);n.__esModule=!0,n.default=void 0;var u=a(t(5354)),o=a(t(7294)),r=function(e){function n(){return e.apply(this,arguments)||this}return(0,u.default)(n,e),n.prototype.render=function(){return o.default.createElement(o.default.Fragment,null)},n}(o.default.Component),l=r;n.default=l}}]);
-//# sourceMappingURL=component---cache-caches-gatsby-plugin-offline-app-shell-js-adc1d736adc468503179.js.map
