@@ -5,6 +5,7 @@ import AllTravels from "../components/AllTravels"
 import Reassurance from "../components/Reassurance"
 
 import Seo from "../components/Seo"
+
 export default function Home() {
 
   // const EnableNotifications = asinc () => {
